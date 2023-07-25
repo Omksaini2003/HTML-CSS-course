@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <title>Navigation</title>
+        <style>
+            .navbar
+            {
+                background-color: black;
+                border-radius: 12px;
+            }
+            .navbar ul
+            {
+                overflow: auto;
+            }
+            .navbar li
+            {
+                width: 20%;
+                float:left;
+                list-style: none;
+                margin: 15px 20px;
+            }
+            .navbar li a
+            {
+                text-decoration: none;
+                padding: 0px 0px;
+                color: white;
+            }
+        </style>
+    </head>
+
+
+    <body>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+
+        <!--form and input-->
+        <form>
+            <label for="name">Name: </label>
+            <div>
+                <input type="text" id="name">
+            </div>
+            <div>
+                Role: <input type="text">
+            </div>
+
+            <div>
+                Email: <input type="email">
+            </div>
+            <div>
+                Are you eligible? <input type="checkbox">
+                Are you Human? <input type="checkbox" checked>
+            </div>
+
+            <div>
+                Gender: Male<input type="radio" name="gender"> Female<input type="radio" name="gender">
+            </div>
+
+            <div>
+                Write here: <textarea name="myText" cols="30" row="10"></textarea>
+            </div>
+
+            <div>
+                <label for="car">Car: </label>
+                <select id="car">
+                    <option value="ind">Indica</option>
+                    <option value="swf">Swift</option>
+                    <option value="null" selected>none</option>
+                </select>
+            </div>
+
+            <div>
+                <input type="submit" value="Submit Now">
+                <input type="reset" value="Reset Form">
+            </div>
+        </form>  
+        
+    </body>
+    
+
+</html>

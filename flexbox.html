@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+
+<style>
+    .header 
+    {
+        height: 55px;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .left-section
+    {
+        background-color: lightblue;
+        width: 150px;
+
+    }
+    .mid-section
+    {
+        background-color: lightpink;
+        flex:1;
+        margin-left: 70px;
+        margin-right: 35px;
+        max-width: 300px;
+    }
+    .right-section
+    {
+        background-color: lightblue;
+        width: 200px; 
+    }
+</style>
+
+
+
+
+<html>
+    <head>
+        <title>flexbox practice</title>
+    </head>
+
+    <body>
+        <div style="
+        margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        border-width: 1px;
+        border-style: solid;
+        border-color: black;
+        justify-content: center;
+        
+        ">
+            <div style="
+            width:100px;
+            background-color: lightpink;
+            ">
+                a
+            </div>
+            <div style="
+            width:100px;
+            background-color: lightblue;
+            ">
+                b   
+            </div>
+        </div>
+        <div style="
+        margin-top:10px;
+        height: 80px;
+        display: flex;
+        flex-direction: row;
+        border-width: 1px;
+        border-style: solid;
+        border-color: black;
+        justify-content: space-between;
+        align-items: end;
+        
+        ">
+            <div style="
+            width:100px;
+            background-color: lightpink;
+            ">
+                c 
+            </div>
+            <div style="
+            width:100px;
+            background-color: lightblue;
+            ">
+                d    
+            </div>
+            
+            <div style="
+            width:100px;
+            background-color: lightpink;
+            ">
+                e
+            </div>
+            <div style="
+            width:100px;
+            background-color: lightblue;
+            ">
+                f    
+            </div>
+        </div>
+    
+        </div>
+
+
+        <div class="header">
+            <div class="left-section">
+                left
+            </div>
+            <div class="mid-section">
+                mid
+            </div>    
+            <div class="right-section">
+                right
+            </div>
+        </div>
+
+
+    </body>
+</html>

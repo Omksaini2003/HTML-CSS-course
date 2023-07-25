@@ -1,0 +1,45 @@
+p
+{
+    font-family: arial;
+}
+
+.video-title
+{
+    font-size: 30px;
+    font-weight: bold;
+    font-style: italic;
+    text-align:left;
+    width: 500px;
+    line-height: 60px;
+    margin-bottom: 0px;
+}
+
+.video-stats
+{
+    margin-top: 0px;
+    font-size: 15px;
+
+}
+
+.appletext
+{
+    font-size: 1 5px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.span-eg
+{
+    color: red;
+    cursor: pointer;
+    margin-left: 100px;
+
+}
+.span-eg:hover
+{
+    text-decoration: underline;
+}
+
