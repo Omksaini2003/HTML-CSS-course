@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.2/dist/leaflet.css"
+    integrity="sha256-sA+zWATbFveLLNqWO2gtiw3HL/lh1giY/Inf1BJ0z14="
+    crossorigin=""/>
+    <!-- Make sure you put this AFTER Leaflet's CSS -->
+    <script src="https://unpkg.com/leaflet@1.9.2/dist/leaflet.js"
+    integrity="sha256-o9N1jGDZrf5tS+Ft4gbIK7mYMipq9lqpVJ91xHSyKhg="
+    crossorigin=""></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+</head>
+<body>
+    
+    <!-- <img src="" id="rainbow" /> -->
+
+    <!-- <canvas id="chart" width="400" height="400"></canvas> -->
+
+    <h1>where is ISS?</h1>
+    <p> latitude: <span id="lat"></span><br />
+        longitude: <span id="lon"></span><br /></p>
+
+    <div id="map" style="height: 480px;"></div>
+
+    <script>
+        let flag= true;
+        //making a map and tile
+        const map = L.map('map').setView([0,0], 1);
+        
+        const attribution  = '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>';
+        const tileUrl = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+        const tiles = L.tileLayer(tileUrl, { attribution});
+        
+        tiles.addTo(map);
+
+        const api_url= 'https://api.wheretheiss.at/v1/satellites/25544'
+
+        //making marker
+        const marker = L.marker([0,0]).addTo(map);
+
+        async function getISS()
+        {
+            const response = await fetch(api_url)
+            const data = await response.json();
+            
+            const {latitude, longitude} = data; 
+            
+            document.getElementById('lat').textContent= latitude.toFixed(2);
+            document.getElementById('lon').textContent= longitude.toFixed(2);
+
+            //L.marker([latitude,longitude]).addTo(map);
+            
+            marker.setLatLng([latitude, longitude]);
+
+            if(flag){
+            map.setView([latitude,longitude],1);
+            flag=false;
+            }
+            //const map = L.map('map').setView([latitude, longitude], 13);
+
+            console.log(latitude);
+            console.log(longitude);
+        }
+
+        getISS();
+
+        setInterval(getISS, 1000);
+        
+
+        
+    </script>
+</body>
+</html>
