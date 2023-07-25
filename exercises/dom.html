@@ -1,0 +1,207 @@
+
+<!--
+selectors -> 
+--> 
+
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+<!-- 
+    <style>
+        .link
+        {
+            color: rgb(0,113,133);
+        }
+        .heading
+        {
+            font-size: 27px;
+            font-weight: bold;
+        }
+        .price
+        {
+            color: rgb(0,118,0);
+            font-weight: bold;
+        }
+        .add
+        {
+            background-color: rgb(255,216,20);
+            width: 125px;
+            height: 30px;
+            border-radius: 15px;
+            border: none;
+            margin-right: 6px;
+        }
+        .buy
+        {
+            background-color: rgb(255,164,28);
+            width: 125px;
+            height: 30px;
+            border-radius: 15px;
+            border: none;
+            margin-left: 6px;
+        }
+    </style>
+     -->
+    <title>
+        2f
+    </title>
+  </head> 
+
+  <body id="body">
+
+<!-- 
+    <a href="https://amazon.in" target="_blank" class="link">
+        Back to Amazon
+    </a>
+    <p class="heading">
+        Nike Black Running Shoes
+    </p>
+    <p class="price">
+        $39 - in stock.
+    </p>
+    <p>
+        Free delivery tomorrow
+    </p>
+    <button class="add">Add to Cart</button>
+    <button class="buy">Buy now</button> -->
+  
+    <ul id="element" data="valid">  
+        <li class="list-item">first element</li>
+        <li class="list-item">second element</li>
+        <li class="list-item">third element</li>
+    </ul>
+
+    <table>
+        <tr>
+            <td>one</td>
+            <td>two</td>
+        </tr>
+        <tr>
+            <td>three</td>
+            <td>four</td>
+        </tr>
+    </table>
+
+
+    <div id="firstDiv" class="allDivs">
+        First div 
+    </div>
+    <!-- <script>
+        const allDivs= document.querySelectorAll(".allDivs")
+        console.log(allDivs)
+    </script> -->
+    <div class="allDivs">
+        Second div 
+    </div>
+
+    <button id="clickBtn" onclick="alert('Namaste world')">click me</button>
+
+    <script>
+        //root name
+        //console.log(document.documentElement)
+        //console.log(document.body)
+        //console.log(document.head) 
+
+        //childrens
+        //console.log(document.body.childNodes)
+        
+        //console.log(document.body.firstChild)
+        //console.log(document.body.firstElementChild)
+        //console.log(document.body.lastChild)
+        //console.log(document.body.lastElementChild)
+
+        //for(node of document.body.children)
+        //{
+        //    console.log(document.body.children)
+        //} 
+        //const childrensOfBody= Array.from(document.body.children)
+        //console.log(childrensOfBody)
+        
+        //siblings
+        //const ulTag= document.body.children[0]
+        ////console.log(ulTag)
+        //firstLi= ulTag.children[0]
+        //secondLi= ulTag.children[1]
+        //console.log(secondLi.previousElementSibling.textContent)
+
+    //const tableTag = document.body.children[1]
+    //console.log(tableTag.tBodies[0].rows[0].cells[0].textContent)
+    //console.log(tableTag.rows)
+    //console.log(tableTag.tBodies[0].rows[0].cells[1].style = "background-color:blue")
+
+    //id search
+    //element.style.background="red"
+    //const ulTag = document.getElementById("element")
+    //ulTag.style.backgroundColor= "red"
+    
+    //const listItem= document.getElementsByClassName("list-item")
+    //console.log(listItem[0].textContent)
+    
+    //const listItems = document.querySelectorAll('.list-item')
+    //const listItems = document.querySelector('#element')
+    //const listItems = document.querySelectorAll('ul > li:last-child')
+    //console.log(listItems[0].textContent)
+
+    
+// attributes
+
+    //console.log(element.getAttribute('data'))
+    //console.log(element.setAttribute('order-placed','pending'))
+    //console.log(element.getAttribute('order-placed'))
+    //console.log(element.hasAttribute('order-placed'))
+    //console.log(element.attributes) 
+
+// creating, removing and updating node elements
+
+    const newDiv= document.createElement('div')
+    //const newText = document.createTextNode('namaste world')
+    //newDiv.append(newText)
+    //newDiv.textContent = "namaste world"
+
+    //newDiv.innerHTML= `<ul id="element" data="valid">  
+    //    <li class="list-item">first element</li>
+    //    <li class="list-item">second element</li>
+    //    <li class="list-item">third element</li>
+    //</ul>`
+
+    
+    //body.append(newDiv)
+    //body.prepend(newDiv)
+    //body.after(newDiv)
+    //body.before(newDiv)
+
+    //firstDiv.replaceWith(newDiv)
+    //firstDiv.remove()
+
+
+//events
+
+    function callMe(){
+        alert("Thanks for watching")
+    }
+
+    //clickBtn.onclick= callMe // replaces existing attribute - islia namaste world wala alert nahi aya // cant use more than onces
+
+    clickBtn.addEventListener('click',callMe)// better
+    clickBtn.removeEventListener('click',callMe) // agr alag se function(callMe) nahi banaya to ye kaam nahi karega
+
+    
+
+    console.log()
+
+    </script>
+
+
+
+    </body> 
+</html>
+
+
+
+
+
+
+
+
